@@ -1,0 +1,1 @@
+console.log("Welcome to The Forest Game site!");

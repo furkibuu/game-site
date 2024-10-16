@@ -1,0 +1,279 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #101010;
+    color: #e5e5e5;
+    line-height: 1.7;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Header ve Navigasyon */
+header {
+    background-color: #111;
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4caf50;
+    transform: translateY(-2px);
+}
+
+/* Banner Bölümü */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://img.tamindir.com/2023/03/476740/sons-of-the-forest-5.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.9) 100%);
+    z-index: -1;
+}
+
+.banner h1 {
+    font-size: 4.5em;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.banner p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Oyun Bilgileri Bölümü */
+.info {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #111, #141414);
+    color: #ddd;
+}
+
+.info h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #4caf50;
+    animation: slideInLeft 1s ease;
+}
+
+.info p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    animation: slideInRight 1s ease;
+}
+
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Form Bölümü */
+.form-section {
+    max-width: 450px;
+    margin: 100px auto;
+    background-color: #222;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+form input {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+form input:focus {
+    background-color: #444;
+    border-color: #4caf50;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Mağaza Bölümü */
+.shop-section {
+    padding: 80px 20px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.shop-section h2 {
+    font-size: 3em;
+    color: #4caf50;
+    margin-bottom: 40px;
+}
+
+.shop-item {
+    display: inline-block;
+    background-color: #333;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.shop-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+}
+
+.shop-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.shop-item h3 {
+    font-size: 1.6em;
+    color: #fff;
+}
+
+.shop-item p {
+    font-size: 1.2em;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.shop-item button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.shop-item button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #0d0d0d;
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
